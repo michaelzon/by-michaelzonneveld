@@ -18,7 +18,6 @@
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
 
                     <i class="fas fa-times" onclick="closemenu()"></i>
@@ -102,14 +101,8 @@
                         <p class="tab-links" onclick="opentab('education')"> Education </p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Languages</span><br> PHP, JavaScript, TypeScript, Python </li>
-                        </ul>
                     </div>
                     <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>03/2022 - 03/2024</span><br> Developer at Piggy </li>
-                        </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
@@ -151,42 +144,6 @@
     </div>
 </div>
 
-<!-- portfolio -->
-
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title"> My Work </h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/stock-photo.png">
-                <div class="layer">
-                    <h3> project title</h3>
-                    <p> description </p>
-                    <a href="#"> link</a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/stock-photo.png">
-                <div class="layer">
-                    <h3> project title</h3>
-                    <p> description </p>
-                    <a href="#"> link</a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/stock-photo.png">
-                <div class="layer">
-                    <h3> project title</h3>
-                    <p> description </p>
-                    <a href="#"> link</a>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn"> See more </a>
-    </div>
-</div>
-
-
 <!-- contact -->
 
 <div id="contact">
@@ -196,9 +153,15 @@
                 <h1 class="sub-title"> Contact </h1>
                 <p><i class="fas fa-paper-plane"> </i>inquiries@michaelzonneveld.com</p>
                 <div class='social-icons'>
-                    <a href="https://last.fm/"> <img src='/logos/lastfm-mark.svg' alt='lastfm-mark' /><p> last.fm/user/michaelsunfield</p></a>
-                    <a href="https://last.fm/"> <img src='/logos/linkedin-mark.svg' alt='linkedin-mark' /><p> linkedin.com/in/michaelzonneveld  </p></a>
-                    <a href="https://last.fm/"> <img src='/logos/github-mark.svg' alt='github-mark' /><p> github.com/michaelzon</p></a>
+                    <a href="https://last.fm/"> <img src='/logos/lastfm-mark.svg' alt='lastfm-mark' />
+                        <p> last.fm/user/michaelsunfield</p>
+                    </a>
+                    <a href="https://last.fm/"> <img src='/logos/linkedin-mark.svg' alt='linkedin-mark' />
+                        <p> linkedin.com/in/michaelzonneveld </p>
+                    </a>
+                    <a href="https://last.fm/"> <img src='/logos/github-mark.svg' alt='github-mark' />
+                        <p> github.com/michaelzon</p>
+                    </a>
                 </div>
                 <a href="images/cv_mfz.pdf" download class="btn btn2"> Download CV </a>
             </div>
@@ -256,17 +219,197 @@
     const msg = document.getElementById("msg");
 
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully";
-            // setTimeout(function() {
-            //     msg.innerHTML = ""
-            // }, 10000)
-            // form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = "Message sent successfully";
+                // setTimeout(function() {
+                //     msg.innerHTML = ""
+                // }, 10000)
+                // form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
     })
-  </script>
+</script>
+
+<script>
+
+    const skillItems = [
+        {
+            definition: 'Languages',
+            elements: ['PHP', 'JavaScript', 'TypeScript']
+        },
+        {
+            definition: 'Technologies & Tools',
+            elements: ['HTML', 'CSS', 'SCSS', 'React', 'Laravel', 'Git', 'JSON', 'MySQL', 'Next.js', 'TailWind CSS', 'SPSS', 'Microsoft Office']
+        },
+        {
+            definition: 'Other',
+            elements: ['User Experience', 'Object-Oriented Programming (OOP)', 'Databases', '(Automatic) Content Analysis', 'Data Processing', 'Media Analysis', 'Customer Relation Management', 'Sales']
+        }
+    ];
+
+    const skills = document.getElementById('skills')
+
+    const skillList = document.createElement('ul');
+    skillList.className = 'skill-list';
+    skills.appendChild(skillList);
+
+    const skillsFrag = document.createDocumentFragment();
+
+    skillItems.forEach((item) => {
+        const li = document.createElement("li");
+        const definition = document.createElement("span");
+        definition.textContent = item.definition
+        li.appendChild(definition);
+
+
+        const br = document.createElement("br");
+        li.appendChild(br);
+
+        const element = createElement("span");
+
+        li.appendChild(document.createTextNode(item.elements.join(', ')))
+
+        skillsFrag.appendChild(li);
+    });
+
+    skillList.appendChild(skillsFrag);
+
+</script>
+
+<script>
+
+    const experienceItems = [
+        {
+            role: 'Full-Stack Developer',
+            location: 'Maarssen',
+            organisation: 'Piggy',
+            period: '03/2022 - 03/2024',
+            description: 'Worked on the business dashboard, company website, the public api and the SDK using tools like MySQL, SCSS, Next.js, TypeScript, Tailwind CSS, React.js, PHP, Laravel and Git.'
+        },
+        {
+            role: 'Student Assistant IT in Education',
+            location: 'Amsterdam',
+            organisation: 'University of Amsterdam',
+            period: '09/2020 - 02/2022',
+            description: 'Giving advice regarding IT systems (e.g., Canvas) and external software, ensuring teachers can process information about our online tools with visualizations and information organization.'
+        },
+        {
+            role: 'Support Engineer',
+            location: 'Amsterdam',
+            organisation: 'De Correspondent',
+            period: '06/2019 – 08/2020',
+            description: 'Technical assistance, including diagnosing, troubleshoot software/hardware problems (e.g., macOS, GSuite). Implemented an inventory system to realize a structured overview of company belongings for the board. Hardware and software maintenance and investment. Responsible for employee onboarding/offboarding. Set up and videoconferencing software (Zoom) and tools for the whole company.'
+        },
+        {
+            role: 'Editor/Trainee',
+            location: 'Amsterdam',
+            organisation: 'Publistat',
+            period: '12/2018 – 04/2019',
+            description: 'Media monitoring for companies in the Dutch financial sector by filtering and interpreting relevant news items. Quantitative and qualitative content analysis and writing reports.'
+        },
+        {
+            role: 'Operations and Customer Service',
+            location: 'Haarlemmermeer',
+            organisation: 'Tinker Travel',
+            period: '07/2016 – 02/2017',
+            description: 'Responsible for planning and organizing airport taxi transport door-to-door. Customer support using Zendesk. The link between taxi-driver and customers. Troubleshooting in times of calamity.'
+        },
+        {
+            role: 'Sales Agent',
+            location: 'Amsterdam',
+            organisation: 'Vandebron',
+            period: '11/2015 – 05/2016',
+            description: 'Sales, green-energy, improved sales technique regarding intonation and body language.'
+        },
+        {
+            role: 'Contact Agent',
+            location: 'Haarlem',
+            organisation: '2Contact',
+            period: '01/2014 – 01/2015',
+            description: 'Career as a telemarketer, worked for Oxxio and XS4ALL. Developed customer-oriented communication skills and advanced sales techniques. Worked with multiple CRM systems.'
+        },
+    ];
+
+
+    // const skillList = document.createElement('ul');
+    // skillList.id = 'skill-list';
+    // skills.appendChild(skillList);
+
+    // const frag = document.createDocumentFragment();
+
+    // skillItems.forEach((item) => {
+    //     const li = document.createElement("li");
+    //     const span = document.createElement("span");
+    //     span.textContent = item.definition
+    //     li.appendChild(span);
+
+    //     const br = document.createElement("br");
+    //     li.appendChild(br);
+
+    //     li.appendChild(document.createTextNode(item.elements.join(', ')))
+
+    //     frag.appendChild(li);
+    // });
+
+    // skillList.appendChild(frag);
+
+    const experience = document.getElementById('experience');
+
+    const experienceList = document.createElement('ul');
+    experienceList.className = 'experience-list';
+    experience.appendChild(experienceList);
+
+    const experienceFrag = document.createDocumentFragment();
+
+    experienceItems.forEach((item) => {
+
+        const li = document.createElement("li");
+
+        const wrapper = document.createElement('div');
+        li.appendChild(wrapper);
+
+        const role = document.createElement('h3');
+        role.textContent = item.role;
+        wrapper.appendChild(role);
+
+        const organisation = document.createElement('h4');
+        organisation.textContent = item.organisation;
+        wrapper.appendChild(organisation);
+
+        const period = document.createElement('span');
+        period.textContent = item.period;
+        li.appendChild(period);
+
+        const br = document.createElement("br");
+        li.appendChild(br);
+
+        const description = document.createElement('p');
+        description.textContent = item.description;
+        li.appendChild(description);
+
+        experienceFrag.appendChild(li);
+    })
+
+
+    experienceList.append(experienceFrag);
+
+
+        // < div class='experience-item' >
+        //                     <div class='role-and-organisation'>
+        //                         <h3> Full-Stack Developer </h3>
+        //                         <h4> Piggy </h4>
+        //                     </div>
+        //                     <span class='professional-period'> 03/2022 - 03/2024 </span>
+        //                     <span class='professional-description'> Worked on the business dashboard, company website,
+        //                         the public api and the SDK
+        //                         using tools like MySQL, SCSS, Next.js, TypeScript, Tailwind CSS, React.js, PHP,
+        //                         Laravel and Git.' </span>
+        //                 </div >
+</script>
+
+
+
 
 </html>

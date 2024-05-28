@@ -107,8 +107,6 @@ nav ul li a:hover::after {
     width: 100%
 }
 
-
-
 .about-col-2 {
     flex-basis: 60%;
 }
@@ -165,6 +163,44 @@ nav ul li a:hover::after {
     display: block;
 }
 
+.skill-list span {
+    font-weight: bold;
+}
+
+.skill-list 
+
+.experience-list div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.experience-list h3 {
+    font-size: 1rem;
+    color: var(--very-dark-gray);
+    margin-bottom: 0.6rem;
+}
+
+.experience-list h4 {
+    padding-top: 0.2rem;
+    font-size: .8rem;
+    font-weight: bold;
+    color: var(--very-dark-gray-lighter);
+    margin-bottom: 0.6rem;
+}
+
+.experience-list h4::before {
+    content: '•';
+    margin-right: 0.5rem;
+    color: var(--soft-coral-pink);
+}
+
+.experience-list p {
+    font-size: 14px;
+    margin: 10px 0 14px 0;
+    line-height: 1.2;
+}
+
 /*  services  */
 
 #services {
@@ -211,78 +247,6 @@ nav ul li a:hover::after {
     background: var(--deep-reddish-burgundy-darker);
     transform: translateY(-10px);
     transition: .5s;
-}
-
-/* portfolio */
-
-#portfolio {
-    padding: 50px 0;
-}
-
-.work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 2px;
-    margin-top: 50px;
-}
-
-.work {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.work img {
-    width: 100%;
-    display: block;
-    transition: transform .5s;
-}
-
-.layer {
-    width: 100%;
-    height: 0%;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), var(--warm-magenta-pink));
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s
-}
-
-.layer active-layer:after {
-    height: 100%
-}
-
-.layer h3 {
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.layer a {
-    margin-top: 20px;
-    color: var(--medium-to-bright-blue);
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-
-.work:hover img {
-    transform: scale(1.1);
-}
-
-
-.work:hover .layer {
-    height: 100%;
 }
 
 .btn {
