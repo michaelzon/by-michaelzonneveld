@@ -84,6 +84,7 @@ nav ul li a:hover::after {
 
 .header-text p {
     margin-top: 16px;
+    max-width: 70%;
     font-style: italic;
 }
 
@@ -200,7 +201,6 @@ nav ul li a:hover::after {
     gap: 1rem;
     margin-bottom: 8px;
 }
-
 
 .experience-list h5::before {
     content: '•';
@@ -392,12 +392,32 @@ nav .fas {
     display: none
 }
 
+@media only screen and (max-width: 820px) {
+
+    #header {
+        background-image: url(images/michael3.png);
+    }
+
+    .about-col-1 {
+        display: none;
+    }
+
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .header-text p {
+        max-width: 54%;
+    }
+    
+}
+
 @media only screen and (max-width: 600px){
     #header {
         background-image: url(images/michael3.png);
     }
     .header-text {
-        margin-top: 100%; 
+        margin-top: 80%; 
         font-size: 16px;
     }
 
@@ -406,6 +426,7 @@ nav .fas {
     }
 
     .header-text p {
+        max-width: 54%;
         font-size: 14px;
     }
 
@@ -442,6 +463,10 @@ nav .fas {
         font-size: 40px;
     }
 
+    #about {
+        padding: 40px 0 20px 0;
+    }
+
     .about-col-1, about-col-2 {
         flex-basis: 100%;
     }
@@ -452,6 +477,43 @@ nav .fas {
 
     .about-col-2 {
         font-size: 14px;
+    }
+
+    .experience-list div {
+        flex-direction: column;
+        gap: .2rem;
+    }
+
+    .experience-list h4 {
+        font-size: 16px;
+    }
+
+    .experience-list h5 {
+        font-size: 14px;
+    }
+    
+    .experience-list h5::before {
+        content: '';
+        margin-right: 0rem;
+    }
+
+    .education-list div {
+        flex-direction: column;
+        gap: .2rem;
+    }
+
+    .education-list h4 {
+        font-size: 16px;
+    }
+
+    .education-list h5 {
+        font-size: 14px;
+    }
+    
+
+    .education-list h5::before {
+        content: '';
+        margin-right: 0rem;
     }
     
     .tab-links{
@@ -466,6 +528,10 @@ nav .fas {
 
     .contact-left, .contact-right {
         flex-basis: 100%;
+    }
+
+    #services {
+        padding-bottom: 40px;
     }
 
     .social-icons {
