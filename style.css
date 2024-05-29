@@ -90,7 +90,7 @@ nav ul li a:hover::after {
 /* about */
 
 #about {
-    padding: 80px 0;
+    padding: 80px 0 40px 0;
 }
 
 .row {
@@ -100,11 +100,28 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 {
+    margin-top: 120px;
     flex-basis: 35%;
+    position: relative;
+
 }
 
-.about-col-1 p {
-    width: 100%
+.comment {
+    width: 420px;
+    height: 420px;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.info {
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    position: absolute;
+    left: 110px;
+    top: 80px;
 }
 
 .about-col-2 {
@@ -115,6 +132,7 @@ nav ul li a:hover::after {
     font-size: 60px;
     font-weight: 600;
     color: var(--warm-magenta-pink);
+    margin-bottom: 25px;
 }
 
 .tab-titles {
@@ -147,7 +165,7 @@ nav ul li a:hover::after {
 
 .tab-contents ul li {
     list-style: none;
-    margin: 10px 0;
+    margin: 10px 0 24px 0;
 }
 
 .tab-contents ul li span {
@@ -163,48 +181,69 @@ nav ul li a:hover::after {
     display: block;
 }
 
-.skill-list span {
-    font-weight: bold;
+.skill-list div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
 }
 
-.skill-list 
+.skill-list span {
+    background-color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem 0.5rem 0;
+    box-shadow: 2px 3px var(--very-dark-gray);
+}
 
 .experience-list div {
     display: flex;
-    flex-direction: row;
     gap: 1rem;
+    margin-bottom: 8px;
 }
 
-.experience-list h3 {
-    font-size: 1rem;
-    color: var(--very-dark-gray);
-    margin-bottom: 0.6rem;
-}
 
-.experience-list h4 {
-    padding-top: 0.2rem;
-    font-size: .8rem;
-    font-weight: bold;
-    color: var(--very-dark-gray-lighter);
-    margin-bottom: 0.6rem;
-}
-
-.experience-list h4::before {
+.experience-list h5::before {
     content: '•';
     margin-right: 0.5rem;
     color: var(--soft-coral-pink);
 }
 
+
+.experience-list h5 {
+    padding-top: 2px;
+}
+
+
 .experience-list p {
-    font-size: 14px;
-    margin: 10px 0 14px 0;
-    line-height: 1.2;
+    margin-top: 8px;
+}
+
+.education-list div {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 8px;
+}
+
+.education-list h5::before {
+    content: '•';
+    margin-right: 0.5rem;
+    color: var(--soft-coral-pink);
+}
+
+
+.education-list h5 {
+    padding-top: 2px;
+}
+
+
+.education-list p {
+    margin-top: 8px;
 }
 
 /*  services  */
 
 #services {
-    padding: 30px 0;
+    padding: 30px 0 120px 0;
 }
 
 .services-list {

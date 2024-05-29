@@ -13,7 +13,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
+                <img src="images/mfz-logo.png" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -39,7 +39,8 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <p> Michael Zonneveld</p>
+                    <img class="comment" src="icons/comment.svg">
+                    <img class="info" src="icons/info.svg">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title"> About me</h1>
@@ -94,7 +95,6 @@
                         making
                         me a valuable asset to any team.</p>
                     <br>
-
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
                         <p class="tab-links" onclick="opentab('experience')"> Experience </p>
@@ -105,10 +105,6 @@
                     <div class="tab-contents" id="experience">
                     </div>
                     <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>09/2020 - 01/2022</span><br> MSc Information Studies: Information Systems at
-                                University of Amsterdam </li>
-                        </ul>
                     </div>
                 </div>
 
@@ -237,11 +233,11 @@
     const skillItems = [
         {
             definition: 'Languages',
-            elements: ['PHP', 'JavaScript', 'TypeScript']
+            elements: ['JavaScript', 'TypeScript', 'PHP', 'Python']
         },
         {
             definition: 'Technologies & Tools',
-            elements: ['HTML', 'CSS', 'SCSS', 'React', 'Laravel', 'Git', 'JSON', 'MySQL', 'Next.js', 'TailWind CSS', 'SPSS', 'Microsoft Office']
+            elements: ['HTML', 'CSS', 'SCSS', 'React', 'Laravel', 'Git', 'JSON', 'MySQL', 'Next.js', 'TailWind CSS', 'Doctrine', 'Eloquent', 'BitBucket', 'GitLab', 'GitHub']
         },
         {
             definition: 'Other',
@@ -259,17 +255,19 @@
 
     skillItems.forEach((item) => {
         const li = document.createElement("li");
-        const definition = document.createElement("span");
+        const definition = document.createElement("h4");
         definition.textContent = item.definition
         li.appendChild(definition);
 
+        const wrapper = document.createElement('div');
+        li.appendChild(wrapper);
 
-        const br = document.createElement("br");
-        li.appendChild(br);
+        item.elements.forEach(el => {
+            const elementSpan = document.createElement("span");
+            elementSpan.textContent = el;
+            wrapper.appendChild(elementSpan);
+        });
 
-        const element = createElement("span");
-
-        li.appendChild(document.createTextNode(item.elements.join(', ')))
 
         skillsFrag.appendChild(li);
     });
@@ -332,29 +330,6 @@
         },
     ];
 
-
-    // const skillList = document.createElement('ul');
-    // skillList.id = 'skill-list';
-    // skills.appendChild(skillList);
-
-    // const frag = document.createDocumentFragment();
-
-    // skillItems.forEach((item) => {
-    //     const li = document.createElement("li");
-    //     const span = document.createElement("span");
-    //     span.textContent = item.definition
-    //     li.appendChild(span);
-
-    //     const br = document.createElement("br");
-    //     li.appendChild(br);
-
-    //     li.appendChild(document.createTextNode(item.elements.join(', ')))
-
-    //     frag.appendChild(li);
-    // });
-
-    // skillList.appendChild(frag);
-
     const experience = document.getElementById('experience');
 
     const experienceList = document.createElement('ul');
@@ -370,11 +345,11 @@
         const wrapper = document.createElement('div');
         li.appendChild(wrapper);
 
-        const role = document.createElement('h3');
+        const role = document.createElement('h4');
         role.textContent = item.role;
         wrapper.appendChild(role);
 
-        const organisation = document.createElement('h4');
+        const organisation = document.createElement('h5');
         organisation.textContent = item.organisation;
         wrapper.appendChild(organisation);
 
@@ -392,21 +367,94 @@
         experienceFrag.appendChild(li);
     })
 
-
     experienceList.append(experienceFrag);
 
+</script>
 
-        // < div class='experience-item' >
-        //                     <div class='role-and-organisation'>
-        //                         <h3> Full-Stack Developer </h3>
-        //                         <h4> Piggy </h4>
-        //                     </div>
-        //                     <span class='professional-period'> 03/2022 - 03/2024 </span>
-        //                     <span class='professional-description'> Worked on the business dashboard, company website,
-        //                         the public api and the SDK
-        //                         using tools like MySQL, SCSS, Next.js, TypeScript, Tailwind CSS, React.js, PHP,
-        //                         Laravel and Git.' </span>
-        //                 </div >
+<script>
+
+
+
+    const educationItems = [
+        {
+            organisation: 'University of Amsterdam',
+            program: 'MSc Information Studies: Information Systems',
+            period: '09/2020 - 01/2022',
+            description: 'Thesis project: analyzed Twitter data with Python between companies and customers to advise how to improve public engagement. | GPA: 7.4/10'
+        },
+        {
+            organisation: 'University of Amsterdam.',
+            program: 'Minor Programming',
+            period: '02/2018 – 06/2018',
+            description: 'Python, Javascript, D3.js, HTML, CSS. Final project: visualizing data on the current state of political trust in the Netherlands.'
+        },
+        {
+            organisation: 'University of Amsterdam.',
+            program: 'BSc Communication Science',
+            period: '09/2016 - 07/2019',
+            description: 'Did my thesis on media populism while using automatic content analysis (using Python) to study people-centrism in Dutch newspapers | GPA: 7.5/10.'
+        },
+        {
+            organisation: 'Amsterdam University of Applied Science',
+            program: 'Commercial Economics',
+            period: '09/2015 – 07/2016',
+            description: 'Specialization in marketing and sales.'
+        },
+        {
+            organisation: 'The Hague University of Applied Science',
+            program: 'Commercial Economics',
+            period: '09/2014 – 07/2015',
+            description: 'Received my propedeutics'
+        },
+        {
+            organisation: 'Lyceum Sancta Maria Haarlem',
+            program: 'HAVO',
+            period: '09/2007 – 07/2013',
+            description: ' Profiel: Economie en Maatschappij; Enrolled at Montessori College Aerdenhout from 2009 till 2011 (VMBO-T)'
+        },
+    ];
+
+    const education = document.getElementById('education');
+
+    const educationList = document.createElement('ul');
+    educationList.className = 'education-list';
+    education.appendChild(educationList);
+
+    const educationFrag = document.createDocumentFragment();
+
+    educationItems.forEach((item) => {
+
+        const li = document.createElement("li");
+
+        const wrapper = document.createElement('div');
+        li.appendChild(wrapper);
+
+        const program = document.createElement('h4');
+        program.textContent = item.program;
+        wrapper.appendChild(program);
+
+        const organisation = document.createElement('h5');
+        organisation.textContent = item.organisation;
+        wrapper.appendChild(organisation);
+
+        const period = document.createElement('span');
+        period.textContent = item.period;
+        li.appendChild(period);
+
+        const br = document.createElement("br");
+        li.appendChild(br);
+
+        const description = document.createElement('p');
+        description.textContent = item.description;
+        li.appendChild(description);
+
+        educationFrag.appendChild(li);
+    })
+
+    educationList.append(educationFrag);
+
+
+
 </script>
 
 
