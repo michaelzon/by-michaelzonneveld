@@ -13,12 +13,11 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
+                <img src="images/mfz-logo.png" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
 
                     <i class="fas fa-times" onclick="closemenu()"></i>
@@ -29,9 +28,9 @@
             <div class="header-text">
                 <span> Developer </span>
                 <h1> Hi, I'm <span>Michael</span></h1>
-                <p> I value quality and well-designed systems and am always <br> interested in understanding why
+                <p> I value quality and well-designed systems and am always interested in understanding why
                     something
-                    works or does not work <br> for a party, an individual, or a machine. </p>
+                    works or does not work for a party, an individual, or a machine. </p>
             </div>
         </div>
     </div>
@@ -40,7 +39,8 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <p> Michael Zonneveld</p>
+                    <img class="comment" src="icons/comment.svg">
+                    <img class="info" src="icons/info.svg">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title"> About me</h1>
@@ -57,7 +57,7 @@
                     </p>
                     <br>
                     <p>
-                        My career began in customer service and sales, where I honed I started to gain interest in
+                        My career began in customer service and sales, where I started to gain interest in
                         communication,
                         systems and learned the importance of customer-oriented service. Transitioning into the IT
                         sector,
@@ -95,27 +95,16 @@
                         making
                         me a valuable asset to any team.</p>
                     <br>
-
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
                         <p class="tab-links" onclick="opentab('experience')"> Experience </p>
                         <p class="tab-links" onclick="opentab('education')"> Education </p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Languages</span><br> PHP, JavaScript, TypeScript, Python </li>
-                        </ul>
                     </div>
                     <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>03/2022 - 03/2024</span><br> Developer at Piggy </li>
-                        </ul>
                     </div>
                     <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>09/2020 - 01/2022</span><br> MSc Information Studies: Information Systems at
-                                University of Amsterdam </li>
-                        </ul>
                     </div>
                 </div>
 
@@ -132,20 +121,20 @@
             <div>
                 <i class="fas fa-code"></i>
                 <h2>Front-End Development</h2>
-                <p> bla bla bla</p>
-                <a href="#"> learn more</a>
+                <!-- <p> [enter text]</p> -->
+                <!-- <a href="#"> learn more</a> -->
             </div>
             <div>
                 <i class="fas fa-layer-group"></i>
                 <h2>Full-Stack Development</h2>
-                <p> bla bla bla</p>
-                <a href="#"> learn more</a>
+                <!-- <p> enter text]</p> -->
+                <!-- <a href="#"> learn more</a> -->
             </div>
             <div>
                 <i class="fas fa-user-tie"></i>
                 <h2>Consultancy</h2>
-                <p> bla bla bla</p>
-                <a href="#"> learn more</a>
+                <!-- <p> enter text]</p> -->
+                <!-- <a href="#"> learn more</a> -->
             </div>
         </div>
     </div>
@@ -193,11 +182,19 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title"> Contact </h1>
-                <p><i class="fas fa-paper-plane"> </i>inquiries@michaelzonneveld.com</p>
+                <!-- <p><i class="fas fa-paper-plane"> </i>inquiries@michaelzonneveld.com</p> -->
                 <div class='social-icons'>
-                    <a href="https://last.fm/"> <img src='/logos/lastfm-mark.svg' alt='lastfm-mark' /><p> last.fm/user/michaelsunfield</p></a>
-                    <a href="https://last.fm/"> <img src='/logos/linkedin-mark.svg' alt='linkedin-mark' /><p> linkedin.com/in/michaelzonneveld  </p></a>
-                    <a href="https://last.fm/"> <img src='/logos/github-mark.svg' alt='github-mark' /><p> github.com/michaelzon</p></a>
+                    <a href="https://www.last.fm/user/MichaelSunfield/"> <img src='/logos/lastfm-mark.svg'
+                            alt='lastfm-mark' />
+                        <p> last.fm/user/michaelsunfield</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/michaelzonneveld/"> <img src='/logos/linkedin-mark.svg'
+                            alt='linkedin-mark' />
+                        <p> linkedin.com/in/michaelzonneveld </p>
+                    </a>
+                    <a href="https://www.github.com/michaelzon/"> <img src='/logos/github-mark.svg' alt='github-mark' />
+                        <p> github.com/michaelzon</p>
+                    </a>
                 </div>
                 <a href="images/cv_mfz.pdf" download class="btn btn2"> Download CV </a>
             </div>
@@ -255,17 +252,249 @@
     const msg = document.getElementById("msg");
 
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully";
-            // setTimeout(function() {
-            //     msg.innerHTML = ""
-            // }, 10000)
-            // form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = "Message sent successfully";
+                // setTimeout(function() {
+                //     msg.innerHTML = ""
+                // }, 10000)
+                // form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
     })
-  </script>
+</script>
+
+<script>
+
+    const skillItems = [
+        {
+            definition: 'Languages',
+            elements: ['JavaScript', 'TypeScript', 'PHP', 'Python']
+        },
+        {
+            definition: 'Technologies & Tools',
+            elements: ['HTML', 'CSS', 'SCSS', 'React', 'Laravel', 'Git', 'JSON', 'MySQL', 'Next.js', 'TailWind CSS', 'Doctrine', 'Eloquent', 'BitBucket', 'GitLab', 'GitHub']
+        },
+        {
+            definition: 'Other',
+            elements: ['User Experience', 'Object-Oriented Programming (OOP)', 'Databases', '(Automatic) Content Analysis', 'Data Processing', 'Media Analysis', 'Customer Relation Management', 'Sales']
+        }
+    ];
+
+    const skills = document.getElementById('skills')
+
+    const skillList = document.createElement('ul');
+    skillList.className = 'skill-list';
+    skills.appendChild(skillList);
+
+    const skillsFrag = document.createDocumentFragment();
+
+    skillItems.forEach((item) => {
+        const li = document.createElement("li");
+        const definition = document.createElement("h4");
+        definition.textContent = item.definition
+        li.appendChild(definition);
+
+        const wrapper = document.createElement('div');
+        li.appendChild(wrapper);
+
+        item.elements.forEach(el => {
+            const elementSpan = document.createElement("span");
+            elementSpan.textContent = el;
+            wrapper.appendChild(elementSpan);
+        });
+
+
+        skillsFrag.appendChild(li);
+    });
+
+    skillList.appendChild(skillsFrag);
+
+</script>
+
+<script>
+
+    const experienceItems = [
+        {
+            role: 'Full-Stack Developer',
+            location: 'Maarssen',
+            organisation: 'Piggy',
+            period: '03/2022 - 03/2024',
+            description: 'Worked on the business dashboard, company website, the public api and the SDK using tools like MySQL, SCSS, Next.js, TypeScript, Tailwind CSS, React.js, PHP, Laravel and Git.'
+        },
+        {
+            role: 'Student Assistant IT in Education',
+            location: 'Amsterdam',
+            organisation: 'University of Amsterdam',
+            period: '09/2020 - 02/2022',
+            description: 'Giving advice regarding IT systems (e.g., Canvas) and external software, ensuring teachers can process information about our online tools with visualizations and information organization.'
+        },
+        {
+            role: 'Support Engineer',
+            location: 'Amsterdam',
+            organisation: 'De Correspondent',
+            period: '06/2019 – 08/2020',
+            description: 'Technical assistance, including diagnosing, troubleshoot software/hardware problems (e.g., macOS, GSuite). Implemented an inventory system to realize a structured overview of company belongings for the board. Hardware and software maintenance and investment. Responsible for employee onboarding/offboarding. Set up and videoconferencing software (Zoom) and tools for the whole company.'
+        },
+        {
+            role: 'Editor/Trainee',
+            location: 'Amsterdam',
+            organisation: 'Publistat',
+            period: '12/2018 – 04/2019',
+            description: 'Media monitoring for companies in the Dutch financial sector by filtering and interpreting relevant news items. Quantitative and qualitative content analysis and writing reports.'
+        },
+        {
+            role: 'Operations and Customer Service',
+            location: 'Haarlemmermeer',
+            organisation: 'Tinker Travel',
+            period: '07/2016 – 02/2017',
+            description: 'Responsible for planning and organizing airport taxi transport door-to-door. Customer support using Zendesk. The link between taxi-driver and customers. Troubleshooting in times of calamity.'
+        },
+        {
+            role: 'Sales Agent',
+            location: 'Amsterdam',
+            organisation: 'Vandebron',
+            period: '11/2015 – 05/2016',
+            description: 'Sales, green-energy, improved sales technique regarding intonation and body language.'
+        },
+        {
+            role: 'Contact Agent',
+            location: 'Haarlem',
+            organisation: '2Contact',
+            period: '01/2014 – 01/2015',
+            description: 'Career as a telemarketer, worked for Oxxio and XS4ALL. Developed customer-oriented communication skills and advanced sales techniques. Worked with multiple CRM systems.'
+        },
+    ];
+
+    const experience = document.getElementById('experience');
+
+    const experienceList = document.createElement('ul');
+    experienceList.className = 'experience-list';
+    experience.appendChild(experienceList);
+
+    const experienceFrag = document.createDocumentFragment();
+
+    experienceItems.forEach((item) => {
+
+        const li = document.createElement("li");
+
+        const wrapper = document.createElement('div');
+        li.appendChild(wrapper);
+
+        const role = document.createElement('h4');
+        role.textContent = item.role;
+        wrapper.appendChild(role);
+
+        const organisation = document.createElement('h5');
+        organisation.textContent = item.organisation;
+        wrapper.appendChild(organisation);
+
+        const period = document.createElement('span');
+        period.textContent = item.period;
+        li.appendChild(period);
+
+        const br = document.createElement("br");
+        li.appendChild(br);
+
+        const description = document.createElement('p');
+        description.textContent = item.description;
+        li.appendChild(description);
+
+        experienceFrag.appendChild(li);
+    })
+
+    experienceList.append(experienceFrag);
+
+</script>
+
+<script>
+
+
+
+    const educationItems = [
+        {
+            organisation: 'University of Amsterdam',
+            program: 'MSc Information Studies: Information Systems',
+            period: '09/2020 - 01/2022',
+            description: 'Thesis project: analyzed Twitter data with Python between companies and customers to advise how to improve public engagement. | GPA: 7.4/10'
+        },
+        {
+            organisation: 'University of Amsterdam.',
+            program: 'Minor Programming',
+            period: '02/2018 – 06/2018',
+            description: 'Python, Javascript, D3.js, HTML, CSS. Final project: visualizing data on the current state of political trust in the Netherlands.'
+        },
+        {
+            organisation: 'University of Amsterdam.',
+            program: 'BSc Communication Science',
+            period: '09/2016 - 07/2019',
+            description: 'Did my thesis on media populism while using automatic content analysis (using Python) to study people-centrism in Dutch newspapers | GPA: 7.5/10.'
+        },
+        {
+            organisation: 'Amsterdam University of Applied Science',
+            program: 'Commercial Economics',
+            period: '09/2015 – 07/2016',
+            description: 'Specialization in marketing and sales.'
+        },
+        {
+            organisation: 'The Hague University of Applied Science',
+            program: 'Commercial Economics',
+            period: '09/2014 – 07/2015',
+            description: 'Received my propedeutics'
+        },
+        {
+            organisation: 'Lyceum Sancta Maria Haarlem',
+            program: 'HAVO',
+            period: '09/2007 – 07/2013',
+            description: ' Profiel: Economie en Maatschappij; Enrolled at Montessori College Aerdenhout from 2009 till 2011 (VMBO-T)'
+        },
+    ];
+
+    const education = document.getElementById('education');
+
+    const educationList = document.createElement('ul');
+    educationList.className = 'education-list';
+    education.appendChild(educationList);
+
+    const educationFrag = document.createDocumentFragment();
+
+    educationItems.forEach((item) => {
+
+        const li = document.createElement("li");
+
+        const wrapper = document.createElement('div');
+        li.appendChild(wrapper);
+
+        const program = document.createElement('h4');
+        program.textContent = item.program;
+        wrapper.appendChild(program);
+
+        const organisation = document.createElement('h5');
+        organisation.textContent = item.organisation;
+        wrapper.appendChild(organisation);
+
+        const period = document.createElement('span');
+        period.textContent = item.period;
+        li.appendChild(period);
+
+        const br = document.createElement("br");
+        li.appendChild(br);
+
+        const description = document.createElement('p');
+        description.textContent = item.description;
+        li.appendChild(description);
+
+        educationFrag.appendChild(li);
+    })
+
+    educationList.append(educationFrag);
+
+
+
+</script>
+
+
+
 
 </html>
