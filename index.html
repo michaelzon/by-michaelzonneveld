@@ -10,100 +10,116 @@
 </head>
 
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="images/mfz-logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#work">My Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-<!--                <i class="fas fa-times" onclick="closemenu()"></i>-->
-            </ul>
-<!--            <i class="fas fa-bars" onclick="openmenu()"></i>-->
-        </nav>
-        <div class="header-text">
-            <span> Developer </span>
-            <div class="typewriter">
-                <div>
-                    <h1>Hi, I'm <span> Michael </span></h1>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/mfz-logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#work">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!--                <i class="fas fa-times" onclick="closemenu()"></i>-->
+                </ul>
+                <!--            <i class="fas fa-bars" onclick="openmenu()"></i>-->
+            </nav>
+            <div class="header-text">
+                <span> Developer </span>
+                <div class="typewriter">
+                    <div>
+                        <h1>Hi, I'm <span> Michael </span></h1>
+                    </div>
                 </div>
+                <p> I value quality and well-designed systems, and I am always interested in understanding why something
+                    works — or doesn’t work — for an individual, party, or machine.</p>
             </div>
-            <p> I value quality and well-designed systems, and I am always interested in understanding why something
-                works — or doesn’t work — for an individual, party, or machine.</p>
         </div>
     </div>
-</div>
-<!-- about  -->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img class="comment" src="icons/comment.svg">
-                <img class="info" src="icons/info.svg">
+    <!-- about  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="comment" src="icons/comment.svg">
+                    <img class="info" src="icons/info.svg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About me</h1>
+                    <p> Hi! My name is Michael Zonneveld, and I am a proficient and dynamic developer with a proven
+                        track
+                        record in software development, IT support, and technical assistance. With a solid foundation in
+                        both the theoretical and practical aspects of information technology, I have demonstrated
+                        exceptional skills in developing and maintaining applications across a broad spectrum of tools
+                        and
+                        technologies. My expertise spans MySQL, SCSS, Next.js, HTML5, TypeScript, Tailwind CSS,
+                        React.js, Vue.js,
+                        PHP, Laravel, and Git.
+                    </p>
+                    <br>
+                    <p>
+                        My career began in customer service and sales, where I developed an interest in communication,
+                        systems, and the importance of customer-oriented service. Transitioning into the IT sector, I
+                        gained
+                        significant experience as a Student Assistant IT in Education at the University of Amsterdam,
+                        providing technical advice and support for educational systems. This role highlighted my ability
+                        to
+                        simplify complex technical information, making it accessible to a non-technical audience.
+                    </p>
+                    <br>
+
+                    <p>
+                        As a Support Engineer at De Correspondent, I demonstrated my problem-solving skills and
+                        technical
+                        expertise by implementing an inventory system that improved the company's operational
+                        efficiency. My
+                        role as a Full Stack Developer at Piggy further solidified my programming abilities, where I
+                        contributed to various projects, delivering high-quality, bug-free work that met and exceeded
+                        design
+                        expectations. Currently I work at Erfrechtplanning as a full stack developer on tools that
+                        support
+                        inheritance specialists. I help design, build, and maintain both internal and user-facing tools
+                        that make it easier for people to create and manage their wills.
+                    </p>
+                    <br>
+
+                    <p>
+                        My academic background includes a Master of Science in Information Studies: Information Systems
+                        from
+                        the University of Amsterdam, where I conducted research on Twitter data analysis to improve
+                        public
+                        engagement. I also hold a Bachelor of Science in Communication Science, where I focused on media
+                        populism and content analysis using Python. These experiences have equipped me with a deep
+                        understanding of data processing, content analysis, and the intersection of technology and
+                        communication.
+                    </p>
+                    <br>
+
+                    <p>
+                        I am eager to leverage my technical expertise and passion for software development to contribute
+                        to
+                        meaningful projects. I thrive on tackling new challenges and aim to work in environments that
+                        value
+                        innovation, teamwork, and a structured approach to problem-solving, making me a valuable asset
+                        to
+                        any team.</p>
+                    <br>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
+                        <p class="tab-links" onclick="opentab('experience')"> Experience </p>
+                        <p class="tab-links" onclick="opentab('education')"> Education </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                    </div>
+                    <div class="tab-contents" id="experience">
+                    </div>
+                    <div class="tab-contents" id="education">
+                    </div>
+                </div>
+
             </div>
-            <div class="about-col-2">
-                <h1 class="sub-title"> About me</h1>
-                <p> Hi! My name is Michael Zonneveld, and I am a proficient and dynamic developer with a proven track
-                    record in software development, IT support, and technical assistance. With a solid foundation in
-                    both the theoretical and practical aspects of information technology, I have demonstrated
-                    exceptional skills in developing and maintaining applications across a broad spectrum of tools and
-                    technologies. My expertise spans MySQL, SCSS, Next.js, HTML5, TypeScript, Tailwind CSS, React.js,
-                    PHP, Laravel, and Git.
-                </p>
-                <br>
-                <p>
-                    My career began in customer service and sales, where I developed an interest in communication,
-                    systems, and the importance of customer-oriented service. Transitioning into the IT sector, I gained
-                    significant experience as a Student Assistant IT in Education at the University of Amsterdam,
-                    providing technical advice and support for educational systems. This role highlighted my ability to
-                    simplify complex technical information, making it accessible to a non-technical audience.
-                </p>
-                <br>
-
-                <p>
-                    As a Support Engineer at De Correspondent, I demonstrated my problem-solving skills and technical
-                    expertise by implementing an inventory system that improved the company's operational efficiency. My
-                    role as a Full Stack Developer at Piggy further solidified my programming abilities, where I
-                    contributed to various projects, delivering high-quality, bug-free work that met and exceeded design
-                    expectations.
-                </p>
-                <br>
-
-                <p>
-                    My academic background includes a Master of Science in Information Studies: Information Systems from
-                    the University of Amsterdam, where I conducted research on Twitter data analysis to improve public
-                    engagement. I also hold a Bachelor of Science in Communication Science, where I focused on media
-                    populism and content analysis using Python. These experiences have equipped me with a deep
-                    understanding of data processing, content analysis, and the intersection of technology and
-                    communication.
-                </p>
-                <br>
-
-                <p>
-                    I am eager to leverage my technical expertise and passion for software development to contribute to
-                    meaningful projects. I thrive on tackling new challenges and aim to work in environments that value
-                    innovation, teamwork, and a structured approach to problem-solving, making me a valuable asset to
-                    any team.</p>
-                <br>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
-                    <p class="tab-links" onclick="opentab('experience')"> Experience </p>
-                    <p class="tab-links" onclick="opentab('education')"> Education </p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                </div>
-                <div class="tab-contents" id="experience">
-                </div>
-                <div class="tab-contents" id="education">
-                </div>
-            </div>
-
         </div>
     </div>
-</div>
 </body>
 
 <!-- services -->
@@ -193,18 +209,18 @@
                 <!--                 <p><i class="fas fa-paper-plane"> </i>inquiries@michaelzonneveld.com</p>-->
                 <div class='social-icons'>
                     <a href="https://www.last.fm/user/MichaelSunfield/"> <img src='/logos/lastfm-mark.svg'
-                                                                              alt='lastfm-mark'/>
+                            alt='lastfm-mark' />
                         <p> last.fm/user/michaelsunfield</p>
                     </a>
                     <a href="https://www.linkedin.com/in/michaelzonneveld/"> <img src='/logos/linkedin-mark.svg'
-                                                                                  alt='linkedin-mark'/>
+                            alt='linkedin-mark' />
                         <p> linkedin.com/in/michaelzonneveld </p>
                     </a>
-                    <a href="https://www.github.com/michaelzon/"> <img src='/logos/github-mark.svg' alt='github-mark'/>
+                    <a href="https://www.github.com/michaelzon/"> <img src='/logos/github-mark.svg' alt='github-mark' />
                         <p> github.com/michaelzon</p>
                     </a>
                 </div>
-<!--                <a href="images/cv_mfz.pdf" download class="btn btn2"> Download CV </a>-->
+                <!--                <a href="images/cv_mfz.pdf" download class="btn btn2"> Download CV </a>-->
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
@@ -261,7 +277,7 @@
 
     form.addEventListener('submit', e => {
         e.preventDefault()
-        fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
             .then(response => {
                 msg.innerHTML = "Message sent successfully";
                 // setTimeout(function() {
@@ -282,7 +298,8 @@
         },
         {
             definition: 'Technologies & Tools',
-            elements: ['HTML', 'CSS', 'SCSS', 'React', 'Laravel', 'Git', 'JSON', 'MySQL', 'Next.js', 'TailWind CSS', 'Doctrine', 'Eloquent', 'BitBucket', 'GitLab', 'GitHub']
+            elements: ['HTML', '(S)CSS', 'Tailwind CSS', 'React.js', 'Next.js', 'Vue.js', 'Laravel', 'PHPUnit', 'Git', 'JSON', 'MySQL', 'Doctrine',
+                'Eloquent', 'Webpack', 'Vite', 'NPM', 'BitBucket', 'GitLab', 'Google Cloud Platform', 'Azure', 'GitHub', 'Figma']
         },
         {
             definition: 'Other',
@@ -324,6 +341,13 @@
 <script>
 
     const experienceItems = [
+        {
+            role: 'Full-Stack Developer',
+            location: 'Weesp',
+            organisation: 'Erfrechtplanning',
+            period: '2025 -',
+            description: 'At Erfrechtplanning, I work as a full stack developer on tools that support inheritance specialists, including a Laravel-based advice platform and a Vue.js-powered frontend. I’ve contributed to feature development, performance optimizations, and UI/UX improvements. I also led key integrations such as Microsoft SSO and calendar APIs, migrated and refactored cronjobs, and helped improve our team’s Git workflows and development practices.'
+        },
         {
             role: 'Full-Stack Developer',
             location: 'Maarssen',
